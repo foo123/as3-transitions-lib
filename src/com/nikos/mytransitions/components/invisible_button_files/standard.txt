@@ -1,1 +1,0 @@
-if (typeof(mboxFactories) !== 'undefined') {mboxFactories.get('default').get('SiteCatalyst: event', 0).setOffer(new mboxOfferDefault()).loaded();}

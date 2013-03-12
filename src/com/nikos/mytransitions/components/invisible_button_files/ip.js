@@ -1,1 +1,0 @@
-var s_dmdbase_v_1={"registry_longitude":23.7332992553711,"registry_country_code":"GR","registry_state":"35","registry_city":"Athens","registry_latitude":37.9832992553711,"isp":true,"registry_zip_code":null,"registry_company_name":"Cosmote Mobile Telecommunications S.A.","ip":"178.146.60.43","registry_area_code":null,"registry_country":"Greece"}

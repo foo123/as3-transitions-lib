@@ -1,1 +1,0 @@
-mboxFactories.get('default').get('defaultmboxname',0).setOffer(new mboxOfferDefault()).loaded();
