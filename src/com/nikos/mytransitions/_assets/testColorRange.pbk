@@ -1,0 +1,37 @@
+<languageVersion : 1.0;>
+
+kernel NewFilter
+<   namespace : "Your Namespace";
+    vendor : "Your Vendor";
+    version : 1;
+    description : "your description";
+>
+{
+    input image4 src;
+    output pixel4 dst;
+    
+    parameter float brightParam
+    <
+    minValue:float(0.0);
+    maxValue:float(1.0);
+    defaultValue:float(0.5);
+    >;
+    
+   
+
+    void
+    evaluatePixel()
+    {
+     pixel4 colorChannel = sampleNearest(src,outCoord());
+     
+     
+     
+     colorChannel.rgb = colorChannel.rgb*brightParam;
+     
+     
+     dst = colorChannel;
+     
+     
+
+    }
+}

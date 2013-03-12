@@ -1,0 +1,30 @@
+<languageVersion : 1.0;>
+
+kernel NewFilter
+<   namespace : "NikosPBK";
+    vendor : "Nikos M.";
+    version : 1;
+    description : "Twirl Map";
+>
+{
+    input image4 src;
+    output pixel4 dst;
+    
+    parameter float2 center;
+
+    parameter float radius;
+    
+    parameter float angle;
+    
+    void
+    evaluatePixel()
+    {
+        float2 posC=outCoord()-center;
+        float rr=sqrt(posC.x*posC.x+posC.y*posC.y);
+        float aa= atan(posC.y, posC.x) + angle * (radius - rr) / radius;
+        if (rr<radius)
+        dst=sampleNearest(src,float2(center.x+rr*cos(aa),center.y+rr*sin(aa)));
+        else
+        dst=sampleNearest(src,outCoord());
+    }
+}

@@ -1,0 +1,31 @@
+<flash_project name="~e10_blur_inspector" version="1">
+	<project_file filetype="fla" path="./~e10_blur_inspector.fla" profile=""/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/SuperInspector.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFHeader.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFFooter.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFComponent.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFSelectList.as"/>
+	<project_file filetype="as" path="./de/argonauten/form/UIComponent.as"/>
+	<project_file filetype="as" path="./mx/events/EventDispatcher.as"/>
+	<project_file filetype="as" path="./de/argonauten/form/SelectList.as"/>
+	<project_file filetype="as" path="./mx/utils/Delegate.as"/>
+	<project_file filetype="as" path="./de/argonauten/form/InputText.as"/>
+	<project_file filetype="as" path="./de/argonauten/utils/logging/ILogger.as"/>
+	<project_file filetype="as" path="./de/argonauten/utils/logging/LoggerAdapter.as"/>
+	<project_file filetype="as" path="./de/argonauten/utils/logging/LogLevel.as"/>
+	<project_file filetype="as" path="./de/argonauten/utils/logging/LogManager.as"/>
+	<project_file filetype="as" path="./de/argonauten/utils/helpers/ArrayUtils.as"/>
+	<project_file filetype="as" path="./de/argonauten/form/RadioGroup.as"/>
+	<project_file filetype="as" path="./de/argonauten/form/CheckBox.as"/>
+	<project_file filetype="as" path="./de/argonauten/form/Form.as"/>
+	<project_file filetype="as" path="./de/argonauten/gui/ScrollPane.as"/>
+	<project_file filetype="as" path="./de/argonauten/gui/ScrollBar.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFTestButton.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFLine.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/E10_blur_inspector.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFNumberInput.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFRadioButtons.as"/>
+	<project_file filetype="as" path="./de/argonauten/form/RadioBT.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFColorPicker.as"/>
+	<project_file filetype="as" path="./net/flashfilter/inspector/components/FFSlider.as"/>
+</flash_project>

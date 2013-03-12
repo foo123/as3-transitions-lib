@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Multi-line strings in Actionscript 3 | Doug McCune</title>
+
+<meta name="generator" content="WordPress abc"> <!-- leave this for stats -->
+<meta name="verify-v1" content="DpARYjNWQBsjhRgTBXDxLp0TsDFXySlx1O5wIkl5Yqs=">
+<link rel="stylesheet" href="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="Doug McCune RSS Feed" href="http://dougmccune.com/blog/feed/">
+<link rel="pingback" href="http://dougmccune.com/blog/xmlrpc.php">
+<script type="text/javascript">hover = function(state,target,img) {   document.getElementById(target).src = 'http://dougmccune.com/blog/wp-content/themes/mandigo-14/images/blue/' + img +(state ? '_hover' : '') + '.gif'; }</script>
+<link rel="alternate" type="application/rss+xml" title="Doug McCune » Multi-line strings in Actionscript 3 Comments Feed" href="http://dougmccune.com/blog/2007/05/15/multi-line-strings-in-actionscript-3/feed/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dougmccune.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dougmccune.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="Doug McCune" href="http://dougmccune.com/blog/">
+<link rel="start" title="Hey! It’s Another Flex Blog!" href="http://dougmccune.com/blog/2007/01/17/first-post/">
+<link rel="prev" title="360Flex session list sneak peak released" href="http://dougmccune.com/blog/2007/05/15/360flex-session-list-sneak-peak-released/">
+<link rel="next" title="Major FlexLib updates – 4 new components + bugfixes" href="http://dougmccune.com/blog/2007/05/24/major-flexlib-updates-4-new-components-bugfixes/">
+<link rel="canonical" href="http://dougmccune.com/blog/2007/05/15/multi-line-strings-in-actionscript-3/">
+<link rel="shortlink" href="http://dougmccune.com/blog/?p=82">
+
+<!-- All in One SEO Pack 1.6.7 by Michael Torbert of Semper Fi Web Design[278,365] -->
+<meta name="description" content="Jesus, this took me a bazillion hours to figure out. OK, so I wanted to set a String variable in Actionscript. The actual value I wanted was a block of">
+<meta name="keywords" content="actionscript">
+<link rel="canonical" href="http://dougmccune.com/blog/2007/05/15/multi-line-strings-in-actionscript-3/">
+<!-- /all in one seo pack -->
+<script type="text/javascript">
+			if (typeof window.Delicious == "undefined") window.Delicious = {};
+			Delicious.BLOGBADGE_DEFAULT_CLASS = 'delicious-blogbadge-line';
+			/* Set manual mode so that we can have multiple badges */
+			Delicious.BLOGBADGE_MANUAL_MODE = 1;
+		</script>
+		<script src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/blogbadge.htm"></script>
+		
+<!-- Wordpress Popular Posts v1.4.5 -->
+<link rel="stylesheet" href="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/wpp.css" type="text/css" media="screen">
+<!-- Wordpress Popular Posts v1.4.5 -->
+	<link rel="stylesheet" type="text/css" media="screen" href="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/wp-contactform-iii.css">
+
+
+<!-- WP-SWFObject 2.0 by unijimpe -->
+<script src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/swfobject.js" type="text/javascript"></script>
+<link rel="stylesheet" href="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/blue.css" type="text/css" media="screen">
+</head>
+<body>
+<div id="page">
+
+
+<div id="header">
+	<div id="headerimg">
+		<!--<h1><a href="http://dougmccune.com/blog/">Doug McCune</a></h1>-->
+		<div class="description">	<div id="wp_quotes">
+		<div class="wp_quotes_quote">I was Web 2.0 before your grandma was Web 2.0</div>
+			</div>
+	</div>
+		<ul class="pages">
+			<li class="page_item"><a href="http://dougmccune.com/blog/">Home</a></li>
+<li class="page_item page-item-21"><a href="http://dougmccune.com/blog/contact/">Contact</a></li>
+<li class="page_item page-item-324"><a href="http://dougmccune.com/blog/flex-for-dummies/">Flex For Dummies</a></li>
+<li class="page_item page-item-271"><a href="http://dougmccune.com/blog/source-code-license/">Source Code License</a></li>
+</ul>
+	</div>
+</div>
+
+	<div id="content" class="widecolumn">
+
+  
+		<div class="navigation">
+			<div class="alignleft">« <a href="http://dougmccune.com/blog/2007/05/15/360flex-session-list-sneak-peak-released/" rel="prev">360Flex session list sneak peak released</a></div>
+			<div class="alignright"><a href="http://dougmccune.com/blog/2007/05/24/major-flexlib-updates-4-new-components-bugfixes/" rel="next">Major FlexLib updates – 4 new components + bugfixes</a> »</div>
+		</div>
+
+		<div class="post" id="post-82">
+                                <div class="postinfo">
+			        	<div class="calborder">
+			        	<div class="cal">
+                                                <span class="cald">15</span>
+                                                <span class="calm">05</span>
+                                                <span class="caly">2007</span>
+                                        </div>
+                                        </div>
+                                        <h2><a href="http://dougmccune.com/blog/2007/05/15/multi-line-strings-in-actionscript-3/" rel="bookmark" title="Permanent Link: Multi-line strings in Actionscript 3">Multi-line strings in Actionscript 3</a></h2>
+                                        <small>Posted by: Doug, in <a href="http://dougmccune.com/blog/category/actionscript/" title="View all posts in Actionscript" rel="category tag">Actionscript</a></small>
+                                </div>
+
+			<div class="entry">
+				<p>Jesus, this took me a bazillion hours to figure out.</p>
+<p>OK, so I wanted to set a String variable in Actionscript. The actual 
+value I wanted was a block of Javascript code (more on why in a second).
+ In <a onclick="javascript:pageTracker._trackPageview('/outgoing/us2.php.net/heredoc');" href="http://us2.php.net/heredoc">PHP</a> we’re allowed to use something called <a onclick="javascript:pageTracker._trackPageview('/outgoing/en.wikipedia.org/wiki/Here_document');" href="http://en.wikipedia.org/wiki/Here_document">heredoc</a> syntax. So I could write my code like this:</p>
+<p><code>$str = &lt;&lt;&lt;EOD<br>
+Example of string<br>
+spanning multiple lines<br>
+using heredoc syntax.<br>
+EOD;</code></p>
+<p>and then my variable would contain the multi-line string with line 
+breaks and all. Sweet, that’s what I wanted to do. Turns out AS3 doesn’t
+ support heredoc syntax. So that sucks. </p>
+<p>I spent the next few hours banging my head on a wall trying to figure
+ out how to cut and paste my long block of code that I wanted to get 
+into a String to work correctly in my AS code. Googling “actionscript 
+heredoc” gave me nothing. Googling “actionscript multi-line string” gave
+ me nothing. The golden nugget was finally realizing that AS3 is 
+basically Javascript 2, so maybe some JS guys had figured this one out. 
+Turns out they did. Here’s the <a onclick="javascript:pageTracker._trackPageview('/outgoing/mook.wordpress.com/2005/10/30/multi-line-strings-in-javascript/');" href="http://mook.wordpress.com/2005/10/30/multi-line-strings-in-javascript/">JS nugget</a> that led me to my solution. </p>
+<p>You can use the same method in Actionscript 3. So your AS code would look like:</p>
+<pre><code>private var myString:String = ( &lt;![CDATA[
+				Here is my string
+				that spans multiple
+				lines.
+				]]&gt; ).toString();</code></pre>
+<p>It’s easier in MXML, in that case all you need to do is something like: </p>
+<pre><code>&lt;mx:String id="myString"&gt;
+	&lt;![CDATA[
+		Here is my string
+		that spans multiple
+		lines.
+	]]&gt;
+&lt;/mx:String&gt;</code></pre>
+<p>So that’s how you simulate the heredoc syntax in AS3. </p>
+<p>And a quick note: when I was trying to figure this out I was making a
+ class that injected Javascript code into the HTML wrapper for a 
+component to execute. See <a onclick="javascript:pageTracker._trackPageview('/outgoing/www.abdulqabiz.com/blog/archives/macromedia_flex/a_mxml_componen.php');" href="http://www.abdulqabiz.com/blog/archives/macromedia_flex/a_mxml_componen.php">Abdul Qabiz’s post here</a>
+ for a description of this method and a utility class to help you do 
+this. Basically this let me write a component that used both 
+Actionscript and Javascript and I could keep all my AS code <strong>and</strong> my JS code within the Actionscript component (as opposed to putting in the HTML wrapper). That’s pretty frickin cool.</p>
+
+		   			<script type="text/javascript">
+					Delicious.BlogBadge.writeBadge('delicious-blogbadge-page-'+Math.random(), location.href, document.title, {}, 'delicious-blogbadge-line');
+				</script>
+				
+
+
+
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted
+						 
+						on Tuesday, May 15th, 2007 at 1:02 pm						and is filed under <a href="http://dougmccune.com/blog/category/actionscript/" title="View all posts in Actionscript" rel="category tag">Actionscript</a>.
+						You can follow any responses to this entry through the <a href="http://dougmccune.com/blog/2007/05/15/multi-line-strings-in-actionscript-3/feed/">RSS 2.0</a> feed. 
+
+													You can <a href="#respond">leave a response</a>, or <a href="http://dougmccune.com/blog/2007/05/15/multi-line-strings-in-actionscript-3/trackback/" rel="trackback">trackback</a> from your own site.
+
+						
+					</small>
+<br>
+
+<span id="wp-notable-line" class="wp-notable-line"><span class="wp-notable" id="wp-notable-delicious"><a href="http://del.icio.us/post?url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="del.icio.us:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/delicious.png" class="wp-notable_image" alt="del.icio.us:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-digg"><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="digg:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/digg.png" class="wp-notable_image" alt="digg:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-spurl"><a href="http://www.spurl.net/spurl.php?title=Multi-line+strings+in+Actionscript+3&amp;url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F" title="spurl:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/spurl.png" class="wp-notable_image" alt="spurl:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-wists"><a href="http://wists.com/r.php?c=&amp;r=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="wists:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/wists.png" class="wp-notable_image" alt="wists:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-simpy"><a href="http://www.simpy.com/simpy/LinkAdd.do?href=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="simpy:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/simpy.png" class="wp-notable_image" alt="simpy:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-newsvine"><a href="http://www.newsvine.com/_tools/seed&amp;save?u=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;h=Multi-line+strings+in+Actionscript+3" title="newsvine:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/newsvine.png" class="wp-notable_image" alt="newsvine:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-blinklist"><a href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&amp;Description=&amp;Url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;Title=Multi-line+strings+in+Actionscript+3" title="blinklist:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/blinklist.png" class="wp-notable_image" alt="blinklist:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-furl"><a href="http://www.furl.net/storeIt.jsp?u=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;t=Multi-line+strings+in+Actionscript+3" title="furl:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/furl.png" class="wp-notable_image" alt="furl:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-reddit"><a href="http://reddit.com/submit?url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="reddit:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/reddit.png" class="wp-notable_image" alt="reddit:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-fark"><a href="http://cgi.fark.com/cgi/fark/edit.pl?new_url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;new_comment=Multi-line+strings+in+Actionscript+3&amp;linktype=" title="fark:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/fark.png" class="wp-notable_image" alt="fark:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-blogmarks"><a href="http://blogmarks.net/my/new.php?mini=1&amp;simple=1&amp;url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="blogmarks:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/blogmarks.png" class="wp-notable_image" alt="blogmarks:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-yahoo"><a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;t=Multi-line+strings+in+Actionscript+3" title="Y!:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/yahoo.png" class="wp-notable_image" alt="Y!:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-smarking"><a href="http://smarking.com/editbookmark/?url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F" title="smarking:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/smarking.png" class="wp-notable_image" alt="smarking:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-magnolia"><a href="http://ma.gnolia.com/bookmarklet/add?url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="magnolia:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/magnolia.png" class="wp-notable_image" alt="magnolia:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-segnalo"><a href="http://segnalo.com/post.html.php?url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="segnalo:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/segnalo.png" class="wp-notable_image" alt="segnalo:Multi-line strings in Actionscript 3"></a></span>&nbsp;<span class="wp-notable" id="wp-notable-gifttagging"><a href="http://www.gifttagging.com/gift/add?url=http%3A%2F%2Fdougmccune.com%2Fblog%2F2007%2F05%2F15%2Fmulti-line-strings-in-actionscript-3%2F&amp;title=Multi-line+strings+in+Actionscript+3" title="gifttagging:Multi-line strings in Actionscript 3"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/gifttagging.png" class="wp-notable_image" alt="gifttagging:Multi-line strings in Actionscript 3"></a></span></span>				</p>
+
+			</div>
+		</div>
+
+
+
+	
+<!-- You can start editing here. -->
+
+	<h3 id="comments">31 Responses to “Multi-line strings in Actionscript 3”</h3> 
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-3671">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.igorcosta.org');" href="http://www.igorcosta.org/" rel="external nofollow" class="url">Igor Costa</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-3671" title="">May 15th, 2007 at 1:30 pm</a> </small>
+
+			<p>You’d better say</p>
+<p>		public var doug:String = ( ”). toString();</p>
+<p>The current doesn’t work.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-3672">
+			<cite><a href="http://dougmccune.com/blog" rel="external nofollow" class="url">Doug</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-3672" title="">May 15th, 2007 at 1:32 pm</a> </small>
+
+			<p>woops, looks like wordpress stripped out the cdata part of your 
+comment, email me and I’ll edit the comment and get the right code in 
+there</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-3673">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.igorcosta.org');" href="http://www.igorcosta.org/" rel="external nofollow" class="url">Igor Costa</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-3673" title="">May 15th, 2007 at 1:43 pm</a> </small>
+
+			<p>Dont’ have your e-mail. you have mine it’s more easy.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-3682">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.returnundefined.com/');" href="http://www.returnundefined.com/" rel="external nofollow" class="url">Ben</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-3682" title="">May 15th, 2007 at 6:50 pm</a> </small>
+
+			<p>Its funny how the timing of posts happens sometimes. I’ve actually
+ been working with the same basic thing the past few days, embedding a 
+large chunk of VBA code in my Flex app (don’t ask), and went with an XML
+ var defined in MXML. I think I like this approach better though, so 
+thanks!</p>
+<p>PS – I’ll be attending your talk at 360|Flex, I’m looking forward to it.</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-3858">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.joangarnet.com');" href="http://www.joangarnet.com/" rel="external nofollow" class="url">Joan Garnet</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-3858" title="">May 20th, 2007 at 4:37 am</a> </small>
+
+			<p>It works without quotation for me.<br>
+It’s nice to do such thing:</p>
+<p>var injectScript:String =<br>
+(<br>
+	&lt;![CDATA[<br>
+		var e = document.createElement("script");<br>
+		void(e.setAttribute("src","MiScript.js"));<br>
+		void(e.setAttribute("type","text/javascript"));<br>
+		void(document.getElementsByTagName("head")[0].appendChild(e));<br>
+	]]&gt;<br>
+).toString();<br>
+ExternalInterface.call( “function(){“+injectScript+”}” );</p>
+<p>I also hate modifying the html template…<br>
+Thanx for sharing!<br>
+ <img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/icon_wink.gif" alt=";-)" class="wp-smiley"> </p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-4033">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.judahfrangipane.com');" href="http://www.judahfrangipane.com/" rel="external nofollow" class="url">judah</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-4033" title="">May 25th, 2007 at 1:00 pm</a> </small>
+
+			<p>Nice!!! I was abusing the textarea like so: </p>
+<p>&lt;mx:TextArea id=”textarea1″ visible=”false”&gt;<br>
+&lt;mx:text&gt;<br>
+&lt;![CDATA[some stuff]]&gt;<br>
+&lt;/mx:text&gt;<br>
+&lt;/mx:TextArea&gt;</p>
+<p>Having figured out the way to do heredoc style would you also know 
+how to wrap a cdata tag around content in an xmlnode? For example:</p>
+<p>myXML.someNode = “&lt;![CDATA[" + someXHMTL + "]]&gt;”;</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-4213">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/abdulqabiz.com/blog/');" href="http://abdulqabiz.com/blog/" rel="external nofollow" class="url">Abdul Qabiz</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-4213" title="">May 30th, 2007 at 3:20 am</a> </small>
+
+			<p>Cool! I would try to use this technique in my JavaScript Inject code. I used some regex to strip/replace characters there..</p>
+<p>Thanks for sharing..</p>
+<p>-abdul</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-5150">
+			<cite>Tanuvan</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-5150" title="">June 6th, 2007 at 4:51 pm</a> </small>
+
+			<p>This is EXACTLY what I have been looking for!!! Thank you for posting !</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-5168">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.dp-reloaded.com');" href="http://www.dp-reloaded.com/" rel="external nofollow" class="url">Nur</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-5168" title="">June 6th, 2007 at 8:35 pm</a> </small>
+
+			<p>I know this works in AS2, haven’t tried it in AS3:</p>
+<p>myString = “This is line number one.”<br>
+myString += “\n”<br>
+myString += “This is the next line.”</p>
+<p>Great code though from the looks of it. Haven’t had a chance to try it out, but thanks for sharing.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-5269">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.judahfrangipane.com');" href="http://www.judahfrangipane.com/" rel="external nofollow" class="url">judah</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-5269" title="">June 8th, 2007 at 1:01 am</a> </small>
+
+			<p>@Joan – Does that method work in major browsers? What is the point of the void() call?</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-5533">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.markchoon.com');" href="http://www.markchoon.com/" rel="external nofollow" class="url">Mark</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-5533" title="">June 13th, 2007 at 11:51 pm</a> </small>
+
+			<p>Thanks Judah for getting me here. This looks promising but when I paste in Joan’s code snippet, I get parse error messages.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-6084">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.judahfrangipane.com');" href="http://www.judahfrangipane.com/" rel="external nofollow" class="url">judah</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-6084" title="">June 29th, 2007 at 11:53 pm</a> </small>
+
+			<p>I get those errors too but for all the code on this page. I’m using FB3 and I’m wondering if this will not work in it?</p>
+<p>private var injectScript:String = String(  ).toString();</p>
+<p>Parse error at ‘ ).toString();\n\t\t’.	FlashTerbate	FlashTerbate.mxml	line 21</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-32015">
+			<cite>naisioxerloro</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-32015" title="">November 29th, 2007 at 12:42 am</a> </small>
+
+			<p>Hi.<br>
+Good design, who make it?</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-35980">
+			<cite>Idetrorce</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-35980" title="">December 15th, 2007 at 3:54 am</a> </small>
+
+			<p>very interesting, but I don’t agree with you<br>
+Idetrorce</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-68670">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/jordan.broughs.net');" href="http://jordan.broughs.net/" rel="external nofollow" class="url">Jordan Brough</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-68670" title="">March 26th, 2008 at 1:18 pm</a> </small>
+
+			<p>Thanks a ton!  I was cringing every time I had to do this before.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-101982">
+			<cite>Tim</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-101982" title="">June 10th, 2008 at 7:48 pm</a> </small>
+
+			<p>Nice solution Doug!<br>
+It’s a great technique when you’re wanting to dump a single block of 
+HTML text into a Textfield and you don’t feel it justifies the use of 
+its own XML file.</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-107532">
+			<cite>Jason</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-107532" title="">June 19th, 2008 at 1:39 pm</a> </small>
+
+			<p>This has probably long been figured out, but I was looking for a 
+solution to posting xhtml data from flex to a blog using XMLRPC.  When I
+ tried this solution, I was also getting the parse errors whenever I 
+append the CDATA end tag as one string.  So what I ended up having to do
+ was:</p>
+<p>myBlogPost:String = ”;</p>
+<p>The parse errors stopped.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-107539">
+			<cite>Jason</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-107539" title="">June 19th, 2008 at 1:41 pm</a> </small>
+
+			<p>Um, oops, that would be:</p>
+<p>myBlogPost: String = ‘[envision the C-DATA start tag here]‘ + blogBody.xhtmlText + ‘]’ +’]’ + ‘&gt;’;</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-116882">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/blog.flapik.net/2008/07/03/multi-line-strings-in-actionscript-3/');" href="http://blog.flapik.net/2008/07/03/multi-line-strings-in-actionscript-3/" rel="external nofollow" class="url">[ fla:pik ] Blog » Multi-line strings in Actionscript 3</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-116882" title="">July 3rd, 2008 at 6:04 pm</a> </small>
+
+			<p>[...] Full Article [...]</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-126321">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.ishus.is/vefhysing');" href="http://www.ishus.is/vefhysing" rel="external nofollow" class="url">Vefhýsing</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-126321" title="">July 20th, 2008 at 7:09 pm</a> </small>
+
+			<p>Excellent!!! Thanks for sharing.</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-207730">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.dottenpixel.com');" href="http://www.dottenpixel.com/" rel="external nofollow" class="url">DouG Molidor</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-207730" title="">April 14th, 2009 at 1:01 pm</a> </small>
+
+			<p>one DouG to another, thanks!<br>
+Great little tip. Cheers for going through the trouble of finding and publishing for us.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-207905">
+			<cite>Damilola "Chayz" Jegede</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-207905" title="">June 5th, 2009 at 6:19 am</a> </small>
+
+			<p>Hey Ya’ll. Very good stuff. My own area is trying to embed CSS in an as file. Wierd huh? Thanks Doug!</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-208478">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.cellcraftgame.com');" href="http://www.cellcraftgame.com/" rel="external nofollow" class="url">Anthony</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-208478" title="">October 5th, 2009 at 5:31 am</a> </small>
+
+			<p>Ah, excellent!  I was storing level data for my game as large XML 
+files and really wasn’t looking forward to removing all the newlines and
+ pasting in thousands of characters of level data on a single, 
+unreadable line.  Bravo – worked like a charm and saved me pulling out 
+some Excedrin!  Thank you.  <img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-209398">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.strawdogmultimedia.com');" href="http://www.strawdogmultimedia.com/" rel="external nofollow" class="url">Greg</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-209398" title="">May 12th, 2010 at 9:09 pm</a> </small>
+
+			<p>In regards to Nur’s comment:<br>
+I know this works in AS2, haven’t tried it in AS3:<br>
+myString = “This is line number one.”<br>
+myString += “\n”<br>
+myString += “This is the next line.”<br>
+—————————————————————-<br>
+I used this for an Air 1.5 application I’m building in Flash CS4 with 
+AS3 and it works just fine for me. I needed to reference variables (XML 
+nodes) instead of just text and add this into items in a list component –
+ found this solution to work perfectly. Short answer -&gt; It worked in 
+AS3 for me.</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-209450">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.nixonmcinnes.co.uk/people/telmo/');" href="http://www.nixonmcinnes.co.uk/people/telmo/" rel="external nofollow" class="url">Telmo Carlos</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-209450" title="">June 2nd, 2010 at 5:41 am</a> </small>
+
+			<p>Thanks! Took me a while to find this page but the solution works perfectly!</p>
+<p>I am embedding Processing code into Processing.as and compiling using the command line.</p>
+<p>Here’s my Actionscript code:</p>
+<p>private var script:String = ( &lt;![CDATA[<br>
+    size(200, 200);<br>
+    smooth();<br>
+    background(0);<br>
+    strokeWeight(10);</p>
+<p>    for(int i = 0; i &lt; width; i++) {<br>
+      float r = random(255);<br>
+      float x = random(0, width);<br>
+      stroke(r, 100);<br>
+      line(i, 0, x, height);<br>
+    }<br>
+]]&gt;).toString();</p>
+<p>Great stuff!</p>
+<p>Telmo</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-210054">
+			<cite>mark</cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-210054" title="">August 5th, 2010 at 3:56 am</a> </small>
+
+			<p>great stuff, exactly what i needed. cdata forever</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-210368">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/mecmachine.com');" href="http://mecmachine.com/" rel="external nofollow" class="url">martin</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-210368" title="">November 23rd, 2010 at 1:14 pm</a> </small>
+
+			<p>You, my friend, are a sweetie pie.  This was an overlooked 
+impending pain in my genitals.  Thanks to you it never got the chance to
+ infuriate me.</p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-210667">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/understandingflex.com/content/flex/heredoc/');" href="http://understandingflex.com/content/flex/heredoc/" rel="external nofollow" class="url">Understanding Flex » Blog Archive » a heredoc in Actionscript</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-210667" title="">February 5th, 2011 at 12:25 pm</a> </small>
+
+			<p>[...] Doug McCune posted about it first (a long time [...]</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-210784">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/blog.joa-ebert.com/');" href="http://blog.joa-ebert.com/" rel="external nofollow" class="url">Joa Ebert</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-210784" title="">March 8th, 2011 at 4:23 am</a> </small>
+
+			<p>You can also do this:</p>
+<p>var x: String = “\<br>
+  hello \<br>
+  world \<br>
+  xyz”;</p>
+<p>Since the \ will escape the line terminator. I know it is not exactly
+ the same but sometimes a little more lightweight than going for CDATA <img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		</li>
+
+	
+	
+		<li class="" id="comment-210785">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.michaelnaman.com');" href="http://www.michaelnaman.com/" rel="external nofollow" class="url">Michael Naman</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-210785" title="">March 8th, 2011 at 10:16 am</a> </small>
+
+			<p>A simple solution for storing JavaScript in AS3 is to embed it as a class like so;</p>
+<p>[Embed(source = "jsFunctionInjection.js", mimeType="application/octet-stream")]<br>
+protected var MyJavascript:Class;</p>
+<p>You can then get the string version for injection by doing this;</p>
+<p>var js:String = new MyJavascript().toString();</p>
+<p>I’ve made a class that tests to see if jQuery is present, if not it 
+injects it into the DOM, then executes a JavaScript function that 
+utilises jQuery. Here’s a great source for all JavaScript injection 
+(it’s 6 pages long but really worth it)</p>
+<p><a onclick="javascript:pageTracker._trackPageview('/outgoing/bit.ly/12wcm');" href="http://bit.ly/12wcm" rel="nofollow">http://bit.ly/12wcm</a></p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-211304">
+			<cite><a onclick="javascript:pageTracker._trackPageview('/outgoing/www.kablowie.com');" href="http://www.kablowie.com/" rel="external nofollow" class="url">Greg Bulmash</a></cite> says:
+						<br>
+
+			<small class="commentmetadata"><a href="#comment-211304" title="">June 13th, 2011 at 11:31 am</a> </small>
+
+			<p>Just a note of thanks. 4 years later, I Google for heredoc in Flex
+ and voila. Try it to make sure the mx:HTML component will display some 
+test documents correctly with a quick cut and paste into my 
+sandbox/playground app and it’s wonderful.</p>
+<p>Thanks!</p>
+
+		</li>
+
+	
+	
+	</ol>
+
+ 
+
+
+<h3 id="respond">Leave a Reply</h3>
+
+
+<form action="http://dougmccune.com/blog/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Name (required)</small></label></p>
+
+<p><input name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+<p><input name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Website</small></label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<p><textarea name="comment" id="comment" cols="100" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" id="submit" tabindex="5" value="Submit Comment" type="submit">
+<input name="comment_post_ID" value="82" type="hidden">
+</p>
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="cbe007adaa" type="hidden"></p>
+</form>
+
+
+
+	
+	</div>
+
+<div id="footer">
+<!-- If you'd like to support WordPress, having the "powered by" link someone on your blog is the best way, it's our only promotion or advertising. -->
+	<p>
+		Powered by <a href="http://wordpress.org/">WordPress</a>, <a href="http://www.onehertz.com/portfolio/wordpress/" target="_blank">Mandigo theme</a> by tom.
+		<br><a href="feed:http://dougmccune.com/blog/feed/"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/rss_s.gif" alt=""> Entries (RSS)</a>
+		and <a href="feed:http://dougmccune.com/blog/comments/feed/"><img src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/rss_s.gif" alt=""> Comments (RSS)</a>.
+		<!-- <br />29 queries. 0.505 seconds. -->
+	</p>
+</div>
+</div>
+
+		<script type="text/javascript">
+			Delicious.BlogBadge.onload();
+		</script>
+<!-- tracker added by Ultimate Google Analytics plugin v1.6.0: http://www.oratransplant.nl/uga -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Multi-line%20strings%20in%20Actionscript%203%20_%20Doug%20McCune_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1254387-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+	<script type="text/javascript">
+	</script>
+
+
+</body></html>

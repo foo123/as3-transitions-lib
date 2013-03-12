@@ -1,0 +1,21 @@
+<languageVersion : 1.0;>
+
+kernel NewFilter
+<   namespace : "Your Namespace";
+    vendor : "Your Vendor";
+    version : 1;
+    description : "your description";
+>
+{
+    input image4 src;
+    output pixel4 dst;
+
+    void
+    evaluatePixel()
+    {
+     pixel4 colorChannel = sampleNearest(src,outCoord());
+     colorChannel.g = colorChannel.g*8.0; 
+     dst = colorChannel;
+
+    }
+}

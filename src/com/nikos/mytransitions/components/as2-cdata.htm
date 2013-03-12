@@ -1,0 +1,1798 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="en"><head><script src="as2-cdata_files/jsonrpc.js" async="" type="text/javascript" id="LR2"></script><script src="as2-cdata_files/parent.js" async="" type="text/javascript" id="LR1"></script><script src="as2-cdata_files/shares.json" type="text/javascript"></script><script src="as2-cdata_files/plugin.js" type="text/javascript"></script><link media="all" href="as2-cdata_files/counter70.css" type="text/css" rel="stylesheet"><script src="as2-cdata_files/widgets.js" type="text/javascript"></script><link media="all" href="as2-cdata_files/widget70.css" type="text/css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="vBulletin 3.8.5">
+
+<meta name="keywords" content="XML CDATA in AS2 throws error, flash, actionscript, action script, macromedia, tutorials, open source, movies, resources, source, actionscripts, books, free, help, forums, community, beginner, intermediate, advanced, developer, XML, PHP, ASP,CGI, database, sounds, fonts, movieclip, array, date, variable, color, math, string, xmlsocket">
+<meta name="description" content="XML CDATA in AS2 throws error ActionScript 2.0">
+
+
+<!-- CSS Stylesheet -->
+<link href="as2-cdata_files/styles.css" type="text/css" rel="stylesheet">
+<link href="as2-cdata_files/orange.css" type="text/css" rel="stylesheet">
+
+<!-- DFP Code for Ads -->
+<script src="as2-cdata_files/vglnk.js" async="" type="text/javascript"></script><script type="text/javascript" src="as2-cdata_files/google_service.js">
+</script>
+<script type="text/javascript">
+GS_googleAddAdSenseService("ca-pub-6513617593401120");
+GS_googleEnableAllServices();
+</script><script src="as2-cdata_files/google_ads.js"></script>
+<script type="text/javascript">
+GA_googleAddSlot("ca-pub-6513617593401120", "ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard");
+GA_googleAddSlot("ca-pub-6513617593401120", "ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper");
+GA_googleAddSlot("ca-pub-6513617593401120", "ActionScriptORG_Forums_BTF_Centre_728x90_Leaderboard");
+</script>
+<script type="text/javascript">
+GA_googleFetchAds();
+</script>
+<!-- END DFP Code for Ads -->
+
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.5 CSS
+* Style: 'style3dot5up'; Style ID: 5
+*/
+body
+{
+	background: #FFFFFF;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	height:100%;
+}
+a:link, body_alink
+{
+	color: #336699;
+}
+a:visited, body_avisited
+{
+	color: #336699;
+}
+a:hover, a:active, body_ahover
+{
+	color: #336699;
+	text-decoration: underline;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #ffffff;
+}
+.tcat
+{
+	background: #f0f0f0;
+	color: #ff663a;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #ff663a;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #ff663a;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #FFFF66;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #c0dbe4;
+	color: #000000;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #000000;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #000000;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #FF0000;
+}
+.tfoot
+{
+	background: #a7cfdd;
+	color: #000000;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #000000;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #000000;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #FF0000;
+}
+.alt1, .alt1Active
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #efefef;
+	color: #000000;
+}
+.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #F5F5FF;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 5px 10px 10px 10px;
+	padding: 0px;
+}
+.wysiwyg a:link, .wysiwyg_alink
+{
+	color: #22229C;
+}
+.wysiwyg a:visited, .wysiwyg_avisited
+{
+	color: #22229C;
+}
+.wysiwyg a:hover, .wysiwyg a:active, .wysiwyg_ahover
+{
+	color: #FF4400;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.bginput option, .bginput optgroup
+{
+	font-size: 10pt;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #666686;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #0099CC;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #E4E7F5 url(images/gradients/gradient_panel.gif) repeat-x top left;
+	color: #000000;
+	padding: 10px;
+	border: 2px outset;
+}
+.panelsurround
+{
+	background: #D1D4E0 url(images/gradients/gradient_panelsurround.gif) repeat-x top left;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #efefef;
+	color: #333333;
+	font: bold 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #333333;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #333333;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #333333;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+.vbmenu_option
+{
+	background: #BBC7CE;
+	color: #000000;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #22229C;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #8A949E;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+body {
+	background-color: #EFEFEF;
+         background-image: url(/img/bg-cms.gif);
+	background-repeat: repeat-x;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 0;
+	margin: 0px auto;
+         height:100%;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+.mainmenu1{
+	background-image:url('/img/menu_a3.gif'); 
+	width:100%;
+}
+.mainmenu2 {
+	background-color: #F73A00;
+	background-image:url('/img/menu_a3.gif'); 
+	width:100%;
+	min-width:100%;
+	height: 27px;
+	white-space: nowrap;
+	display:table-row;
+	overflow:hidden;
+}
+.mainmenu2 a {
+	display: table-cell;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: center;
+	border-right: 1px solid #FFFFFF; 
+	text-decoration: none; 
+	padding: 7px; 
+	padding-bottom: 4px;
+	height: 27px;	
+}
+.mainmenu2 a:hover {
+	background-image:url('/img/menu_c.gif');
+	font-size: 11px;
+	color: #ffffff; 
+}
+.mainmenu2 a:visited {
+	color: #ffffff;
+	font-size: 11px; 
+}
+.menu3 {
+	border: 1px solid #336699; 
+	margin-top: 3px; 
+	background-color:#FAFAFA;	
+	text-align: left;
+	height: 14px;
+}
+
+.menu3 a { 
+	border-left: 1px solid #336699;
+	padding-left: 6px;
+	padding-right: 6px;
+	float: right;
+	text-decoration: none;
+	font-size: 11px; 
+	color: #4C4C4C;	
+}
+.menu3 a:hover {
+  background-color: #e5e8ea;
+	color: 000000;
+	font-size: 11px;
+}
+.menu3 a:visited {
+	color: 000000;
+	font-size: 11px;
+}
+
+.menu3 img { 
+	vertical-align: middle;
+}
+.bgleft {
+	background-image: url(/img/bg_left.gif);
+}
+.bgtop {
+	background-image: url(/img/bg_top.gif);
+}
+.bgright {
+	background-image: url(/img/bg_right.gif);
+}
+.bgbot {
+	background-image: url(/img/bg_bot.gif);
+}
+.bgmidd {
+	background-image: url(/img/bg_midd.gif);
+}
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+.listdiv {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(/img/cor_list.jpg); MARGIN-LEFT: 7px; WIDTH: 230px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 90px; BACKGROUND-COLOR: #55585f; 	COLOR: #FFFFFF;
+	FONT-FAMILY: verdana, arial, sans-serif;
+	FONT-SIZE: 10px;
+.job2 {width: 150px;}
+.job2 h2 {
+color:#666666;
+font-size:14px;
+margin:0 0 3px;
+padding:5px 0;
+}
+.job2 ul {
+margin:0;
+padding:0;
+}
+.job2 li {
+font-size:11px;
+list-style-type:none;
+margin:0;
+padding:1px 0 1px 10px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="as2-cdata_files/vbulletin_important.css">
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript" src="as2-cdata_files/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="as2-cdata_files/connection-min.js"></script>
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script type="text/javascript" src="as2-cdata_files/vbulletin_global.js"></script>
+<script type="text/javascript" src="as2-cdata_files/vbulletin_menu.js"></script>
+
+<link rel="alternate" type="application/rss+xml" title="ActionScript.org Forums RSS Feed" href="http://www.actionscript.org/forums/external.php3?type=RSS2">
+
+<link rel="alternate" type="application/rss+xml" title="ActionScript.org Forums - ActionScript 2.0 - RSS Feed" href="http://www.actionscript.org/forums/external.php3?type=RSS2&amp;forumids=35">
+
+
+<!---------------------- page top STARTS ------------------------------>
+<!---------------------- page top ENDs ------------------------------><script type="text/javascript" src="as2-cdata_files/vbam.js"></script>
+	<title>XML CDATA in AS2 throws error - ActionScript.org Forums</title>
+	<script type="text/javascript" src="as2-cdata_files/vbulletin_post_loader.js"></script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size: 11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size: 24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size: 14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yO/r/_j03izEX40U.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle
+white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size: 12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size: 12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size: 16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{position:relative;display:-moz-inline-block;display:inline-block}
+.fb_iframe_widget iframe{position:relative;vertical-align:text-bottom}
+.fb_iframe_widget span{position:relative}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_button_simple,
+.fb_button_simple_rtl{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yH/r/eIpbnVKI9lR.png);background-repeat:no-repeat;cursor:pointer;outline:none;text-decoration:none}
+.fb_button_simple_rtl{background-position:right 0}
+.fb_button_simple .fb_button_text{margin:0 0 0 20px;padding-bottom:1px}
+.fb_button_simple_rtl .fb_button_text{margin:0 10px 0 0}
+a.fb_button_simple:hover .fb_button_text,
+a.fb_button_simple_rtl:hover .fb_button_text,
+.fb_button_simple:hover .fb_button_text,
+.fb_button_simple_rtl:hover .fb_button_text{text-decoration:underline}
+.fb_button,
+.fb_button_rtl{background:#29447e url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/FGFbc80dUKj.png);background-repeat:no-repeat;cursor:pointer;display:inline-block;padding:0 0 0 1px;text-decoration:none;outline:none}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text{background:#5f78ab url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/FGFbc80dUKj.png);border-top:solid 1px #879ac0;border-bottom:solid 1px #1a356e;color:#fff;display:block;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;padding:2px 6px 3px 6px;margin:1px 1px 0 21px;text-shadow:none}
+a.fb_button,
+a.fb_button_rtl,
+.fb_button,
+.fb_button_rtl{text-decoration:none}
+a.fb_button:active .fb_button_text,
+a.fb_button_rtl:active .fb_button_text,
+.fb_button:active .fb_button_text,
+.fb_button_rtl:active .fb_button_text{border-bottom:solid 1px #29447e;border-top:solid 1px #45619d;background:#4f6aa3;text-shadow:none}
+.fb_button_xlarge,
+.fb_button_xlarge_rtl{background-position:left -60px;font-size: 24px;line-height:30px}
+.fb_button_xlarge .fb_button_text{padding:3px 8px 3px 12px;margin-left:38px}
+a.fb_button_xlarge:active{background-position:left -99px}
+.fb_button_xlarge_rtl{background-position:right -268px}
+.fb_button_xlarge_rtl .fb_button_text{padding:3px 8px 3px 12px;margin-right:39px}
+a.fb_button_xlarge_rtl:active{background-position:right -307px}
+.fb_button_large,
+.fb_button_large_rtl{background-position:left -138px;font-size: 13px;line-height:16px}
+.fb_button_large .fb_button_text{margin-left:24px;padding:2px 6px 4px 6px}
+a.fb_button_large:active{background-position:left -163px}
+.fb_button_large_rtl{background-position:right -346px}
+.fb_button_large_rtl .fb_button_text{margin-right:25px}
+a.fb_button_large_rtl:active{background-position:right -371px}
+.fb_button_medium,
+.fb_button_medium_rtl{background-position:left -188px;font-size: 11px;line-height:14px}
+a.fb_button_medium:active{background-position:left -210px}
+.fb_button_medium_rtl{background-position:right -396px}
+.fb_button_text_rtl,
+.fb_button_medium_rtl .fb_button_text{padding:2px 6px 3px 6px;margin-right:22px}
+a.fb_button_medium_rtl:active{background-position:right -418px}
+.fb_button_small,
+.fb_button_small_rtl{background-position:left -232px;font-size: 10px;line-height:10px}
+.fb_button_small .fb_button_text{padding:2px 6px 3px;margin-left:17px}
+a.fb_button_small:active,
+.fb_button_small:active{background-position:left -250px}
+.fb_button_small_rtl{background-position:right -440px}
+.fb_button_small_rtl .fb_button_text{padding:2px 6px;margin-right:18px}
+a.fb_button_small_rtl:active{background-position:right -458px}
+.fb_share_count_wrapper{position:relative;float:left}
+.fb_share_count{background:#b0b9ec none repeat scroll 0 0;color:#333;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center}
+.fb_share_count_inner{background:#e8ebf2;display:block}
+.fb_share_count_right{margin-left:-1px;display:inline-block}
+.fb_share_count_right .fb_share_count_inner{border-top:solid 1px #e8ebf2;border-bottom:solid 1px #b0b9ec;margin:1px 1px 0 1px;font-size: 10px;line-height:10px;padding:2px 6px 3px;font-weight:bold}
+.fb_share_count_top{display:block;letter-spacing:-1px;line-height:34px;margin-bottom:7px;font-size: 22px;border:solid 1px #b0b9ec}
+.fb_share_count_nub_top{border:none;display:block;position:absolute;left:7px;top:35px;margin:0;padding:0;width:6px;height:7px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yU/r/bSOHtKbCGYI.png)}
+.fb_share_count_nub_right{border:none;display:inline-block;padding:0;width:5px;height:10px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yX/r/i_oIVTKMYsL.png);vertical-align:top;background-position:right 5px;z-index:10;left:2px;margin:0 2px 0 0;position:relative}
+.fb_share_no_count{display:none}
+.fb_share_size_Small .fb_share_count_right .fb_share_count_inner{font-size: 10px}
+.fb_share_size_Medium .fb_share_count_right .fb_share_count_inner{font-size: 11px;padding:2px 6px 3px;letter-spacing:-1px;line-height:14px}
+.fb_share_size_Large .fb_share_count_right .fb_share_count_inner{font-size: 13px;line-height:16px;padding:2px 6px 4px;font-weight:normal;letter-spacing:-1px}
+.fb_share_count_hidden .fb_share_count_nub_top,
+.fb_share_count_hidden .fb_share_count_top,
+.fb_share_count_hidden .fb_share_count_nub_right,
+.fb_share_count_hidden .fb_share_count_right{visibility:hidden}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size: 13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size: 11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr{left:-4px}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_rtl{left:2px}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{left:0;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}
+</style></head>
+<body onload=""><iframe src="as2-cdata_files/hub.htm" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrame" tabindex="0" allowtransparency="true" frameborder="0" scrolling="no"></iframe><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe src="as2-cdata_files/sh66.htm" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0pt none; left: 0pt; top: 0pt;" title="AddThis utility frame" id="_atssh293"></iframe></div>
+<!-- <div style="border-bottom:1px solid #999999; padding: 5px; font-size: 11px; font-family: Arial,Helvetica,sans-serif; color:#666666; height:20px; opacity: 0.9; background-color: rgb(255, 255, 255); z-index: 99999;"></div> -->
+<div id="aswrap">
+<div id="bgcontain">
+
+<!-- Start PageHeader -->
+<div id="greenbg">
+	<div id="greenlogo">
+		<script type="text/javascript" src="as2-cdata_files/swfobject.js"></script>
+		<div id="logo"><embed type="application/x-shockwave-flash" src="as2-cdata_files/as_logo_b.swf" id="logo" name="logo" bgcolor="#fcbd00" quality="high" height="45" width="240"></div>
+		<script type="text/javascript">
+		   var so = new SWFObject("/img/as_logo_b.swf", "logo", "240", "45", "5", "#fcbd00");
+		   so.write("logo");
+		</script>
+	</div>
+	<div id="googlesearch">
+		<form action="http://www.actionscript.org/resources/search/advanced" id="cse-search-box">
+		  <div>
+			<input name="cx" value="partner-pub-6513617593401120:snfxp4sve9m" type="hidden">
+			<input name="cof" value="FORID:11" type="hidden">
+			<input name="ie" value="ISO-8859-1" type="hidden">
+			<input style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" name="q" size="20" type="text">
+			<input name="sa" value="Search" type="submit">
+		  </div>
+		<input value="www.actionscript.org/forums/showthread.php3?t=239834" name="siteurl" type="hidden"></form>
+		<script type="text/javascript" src="as2-cdata_files/brand"></script>
+
+	</div>
+	<div id="greensubmenu">
+		<a href="http://www.actionscript.org/resources/pages/Advertising">Advertise</a><div id="sep">|</div><a href="http://www.actionscript.org/resources/pages/Contact-Us">About us</a><div id="sep">|</div><a href="http://www.actionscript.org/resources/pages/Site-Map.html">Site map</a><div id="sep">|</div><a href="http://www.actionscript.org/resources/pages/Syndicate">Syndicate</a><div id="sep">|</div><a href="http://www.actionscript.org/resources/search/advanced">Search site</a><div id="sep">|</div><a href="http://www.actionscript.org/lists/">Mailing list</a><div id="sep">|</div><a href="http://www.actionscript.org/resources/authors">View Authors</a><div id="sep">|</div><a href="http://www.actionscript.org/resources/authors/register">Become an Author</a>
+	</div>
+</div>
+<table id="themaintopnav" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td>
+<a href="http://www.actionscript.org/index.php">Home</a>
+</td><td>
+<a href="http://www.actionscript.org/resources/categories/Tutorials/">Tutorials</a>
+</td><td>
+<a href="http://www.actionscript.org/forums/index.php3">Forums</a>
+</td><td>
+<a href="http://www.actionscript.org/resources/categories/Articles/">Articles</a>
+</td><td>
+<a href="http://www.actionscript.org/resources/blogs">Blogs</a>
+</td><td>
+<a href="http://www.actionscript.org/movies-categories.php">Movies</a>
+</td><td>
+<a href="http://www.actionscript.org/actionscripts_library/">Library</a>
+</td><td>
+<a href="http://www.actionscript.org/employment/register.php">Employment</a>
+</td><td id="lastmenutd">
+<a href="http://www.actionscript.org/resources/categories/Press-Releases/">Press</a>
+</td>
+</tr></tbody></table>
+<!-- Start right table -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+
+	<td valign="top">
+<!-- Stop right table -->
+<!-- content table -->
+<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:100%; text-align:left">
+			<div style="padding:0px 0px 0px 0px">
+
+
+<br>
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="alt1" width="100%">
+		
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr valign="bottom">
+				<td><a href="#" onclick="history.back(1); return false;"><img title="Go Back" src="as2-cdata_files/navbits_start.gif" alt="Go Back" border="0"></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="http://www.actionscript.org/forums/index.php3" accesskey="1">ActionScript.org Forums</a></span> 
+	<span class="navbar">&gt; <a href="http://www.actionscript.org/forums/forumdisplay.php3?f=84">ActionScript Forums Group</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://www.actionscript.org/forums/forumdisplay.php3?f=35">ActionScript 2.0</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size: 10pt; padding-top: 1px;" colspan="3"><a href="http://www.actionscript.org/forums/showthread.php3?t=239834"><img title="Reload this Page" class="inlineimg" src="as2-cdata_files/navbits_finallink_ltr.gif" alt="Reload this Page" border="0"></a> <strong>
+	 XML CDATA in AS2 throws error
+
+</strong></td>
+			</tr>
+			</tbody></table>
+		
+	</td>
+
+	<td class="alt2" style="padding: 0px;" nowrap="nowrap">
+		<!-- login form -->
+		<form action="login.php3?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="as2-cdata_files/vbulletin_md5.js"></script>
+		<table border="0" cellpadding="0" cellspacing="3">
+		<tbody><tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username">User Name</label></td>
+			<td><input class="bginput" style="font-size: 11px;" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';" type="text"></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" type="checkbox">Remember Me?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Password</label></td>
+			<td><input class="bginput" style="font-size: 11px;" name="vb_login_password" id="navbar_password" size="10" tabindex="102" type="password"></td>
+			<td><input class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" type="submit"></td>
+		</tr>
+		</tbody></table>
+		<input name="s" value="" type="hidden">
+		<input name="securitytoken" value="guest" type="hidden">
+		<input name="do" value="login" type="hidden">
+		<input name="vb_login_md5password" type="hidden">
+		<input name="vb_login_md5password_utf" type="hidden">
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</tbody></table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding:1px; border-top-width:0px">
+	<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr align="center">
+		
+		
+			<td class="vbmenu_control"><a href="http://www.actionscript.org/forums/register.php3" rel="nofollow">Register</a></td>
+		
+		
+		<td class="vbmenu_control"><a rel="help" href="http://www.actionscript.org/forums/faq.php3" accesskey="5">FAQ</a></td>
+		
+			<td class="vbmenu_control"><a style="cursor: pointer;" id="community" href="http://www.actionscript.org/forums/showthread.php3?t=239834&amp;nojs=1#community" rel="nofollow" accesskey="6">Community <img alt="" title="" src="as2-cdata_files/menu_open.gif" border="0"></a> <script type="text/javascript"> vbmenu_register("community"); </script></td>
+		
+		<td class="vbmenu_control"><a href="http://www.actionscript.org/forums/calendar.php3">Calendar</a></td>
+		
+			
+				
+				<td class="vbmenu_control"><a href="http://www.actionscript.org/forums/search.php3?do=getdaily" accesskey="2">Today's Posts</a></td>
+				
+				<td class="vbmenu_control"><a id="navbar_search" href="http://www.actionscript.org/forums/search.php3" accesskey="4" rel="nofollow">Search</a> </td>
+			
+			
+		
+		
+		
+		</tr>
+	</tbody></table>
+</div>
+<!-- / nav buttons bar -->
+
+<br>
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	<!-- community link menu -->
+	<div class="vbmenu_popup" id="community_menu" style="display:none;margin-top:3px" align="left">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr><td class="thead">Community Links</td></tr>
+		
+		
+					<tr><td class="vbmenu_option"><a href="http://www.actionscript.org/forums/group.php3">Social Groups</a></td></tr>
+		
+		
+					<tr><td class="vbmenu_option"><a href="http://www.actionscript.org/forums/album.php3">Pictures &amp; Albums </a></td></tr>
+		
+		
+		
+			<tr><td class="vbmenu_option"><a href="http://www.actionscript.org/forums/memberlist.php3">Members List</a></td></tr>
+		
+		
+		</tbody></table>
+	</div>
+	<!-- / community link menu -->
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php3?do=process" method="post">
+
+					<input name="do" value="process" type="hidden">
+					<input name="quicksearch" value="1" type="hidden">
+					<input name="childforums" value="1" type="hidden">
+					<input name="exactname" value="1" type="hidden">
+					<input name="s" value="" type="hidden">
+					<input name="securitytoken" value="guest" type="hidden">
+					<div><input class="bginput" name="query" size="25" tabindex="1001" type="text"><input class="button" value="Go" tabindex="1004" type="submit"></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" type="radio">Show Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" type="radio">Show Posts</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.actionscript.org/forums/tags.php3" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.actionscript.org/forums/search.php3" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		
+		</tbody></table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="index.php3" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input class="bginput" id="pagenav_itxt" style="font-size: 11px;" size="4" type="text">
+				<input class="button" id="pagenav_ibtn" value="Go" type="button">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+
+<table class="tborder" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="alt1" align="center">
+
+<!-- ca-pub-6513617593401120/ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard -->
+<script type="text/javascript">
+GA_googleFillSlot("ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard");
+</script><script src="as2-cdata_files/ads_002"></script><div id="google_ads_div_ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard_ad_container">
+<ins style="width: 728px; height: 90px; display: inline-table; position: relative; border: 0pt none;"><ins style="width: 728px; height: 90px; display: block; position: relative; border: 0pt none;"><iframe style="border: 0pt none; position: absolute; top: 0pt; left: 0pt;" marginheight="0" marginwidth="0" name="google_ads_iframe_ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard" id="google_ads_iframe_ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins></div>
+<script>GA_googleCreateDomIframe("google_ads_div_ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard_ad_container" ,"ActionScriptORG_Forums_ATF_Centre_728x90_Leaderboard");</script>
+
+
+
+
+
+	</td>
+</tr>
+	
+</tbody></table>
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table style="margin-bottom: 3px;" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="bottom">
+	
+		<td class="smallfont"><a href="http://www.actionscript.org/forums/newreply.php3?do=newreply&amp;noquote=1&amp;p=1002293" rel="nofollow"><img title="Reply" src="as2-cdata_files/reply.gif" alt="Reply" border="0"></a></td>
+	
+	
+</tr>
+</tbody></table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" style="border-bottom-width: 0px;" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td style="cursor: pointer;" class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="http://www.actionscript.org/forums/showthread.php3?t=239834&amp;nojs=1#goto_threadtools">Thread Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script> <img alt="" title="" src="as2-cdata_files/menu_open.gif" border="0">
+	</td>
+	
+	
+		<td style="cursor: pointer;" class="vbmenu_control" id="threadrating" nowrap="nowrap">
+			<a href="http://www.actionscript.org/forums/showthread.php3?t=239834&amp;nojs=1#goto_threadrating"><span id="threadrating_current">Rate Thread</span></a>
+			<script type="text/javascript"> vbmenu_register("threadrating"); </script> <img alt="" title="" src="as2-cdata_files/menu_open.gif" border="0">
+		</td>
+	
+	
+	<td style="cursor: pointer;" class="vbmenu_control" id="displaymodes" nowrap="nowrap">
+		<a href="http://www.actionscript.org/forums/showthread.php3?t=239834&amp;nojs=1#goto_displaymodes">Display Modes</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script> <img alt="" title="" src="as2-cdata_files/menu_open.gif" border="0">
+	</td>
+	
+	
+	
+	
+</tr>
+</tbody></table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #1002293 -->
+
+	<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:100%; text-align:left">
+			<div style="padding:0px 0px 0px 0px">
+
+	<div id="edit1002293" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table id="post1002293" class="tborder" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight: normal; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(255, 255, 255) -moz-use-text-color rgb(255, 255, 255) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;">
+			<!-- status icon and date -->
+			<a name="post1002293"><img title="Old" class="inlineimg" src="as2-cdata_files/post_old.gif" alt="Old" border="0"></a>
+			05-26-2010, 12:06 PM
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight: normal; border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;" align="right">
+			&nbsp;
+			#<a href="http://www.actionscript.org/forums/showpost.php3?p=1002293&amp;postcount=1" target="new" rel="nofollow" id="postcount1002293" name="1"><strong>1</strong></a>
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" style="border-right: 1px solid rgb(255, 255, 255); border-left: 1px solid rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 0px 1px; border-style: none solid; border-color: -moz-use-text-color rgb(255, 255, 255);" width="175">
+
+			<div id="postmenu_1002293">
+				
+				<a class="bigusername" href="http://www.actionscript.org/forums/member.php3?u=8989">pointer</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_1002293", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Senior Member</div>
+			
+			
+
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jan 2003</div>
+				<div>Location: Somewhere on Flash 8, for now.</div>
+				
+				<div>
+					Posts: 172
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_1002293" style="border-right: 1px solid rgb(255, 255, 255);">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="as2-cdata_files/icon1.gif" alt="Default" border="0">
+				<strong>XML CDATA in AS2 throws error</strong>
+			</div>
+			<hr style="color:#FFFFFF; background-color:#FFFFFF" size="1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1002293">
+			
+			The following code works fine in AS3, but throws errors in AS2. Any suggestion on how to get this to work in AS2? Thanks.<br>
+<br>
+<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">ActionScript Code:</div>
+	<pre class="alt2" style="margin:0px; padding:6px; border:1px inset; width:500px; height:132px; overflow:auto"><div dir="ltr" style="text-align:left;"><div class="actionscript"><span style="color: #993300;">var</span> javascriptXMLTest:<span style="color: #993300;">XML</span> = &lt;!<span style="color: #000000;">[</span>CDATA<span style="color: #000000;">[</span>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #993300;">function</span> testFunc<span style="color: #000000;">(</span><span style="color: #000000;">)</span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000;">{</span>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;alert<span style="color: #000000;">(</span><span style="color: #0000FF;">"This is a test"</span><span style="color: #000000;">)</span>;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #000000;">}</span>
+<span style="color: #000000;">]</span><span style="color: #000000;">]</span>&gt;;</div></div></pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border-right: 1px solid rgb(255, 255, 255); border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(255, 255, 255) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;">
+		<img title="pointer is offline" class="inlineimg" src="as2-cdata_files/user_offline.gif" alt="pointer is offline" border="0">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" style="border-right: 1px solid rgb(255, 255, 255); border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: -moz-use-text-color rgb(255, 255, 255) rgb(255, 255, 255) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;" align="right">
+	
+		<!-- controls -->
+		
+		
+		
+			<a href="http://www.actionscript.org/forums/newreply.php3?do=newreply&amp;p=1002293" rel="nofollow"><img title="Reply With Quote" src="as2-cdata_files/quote.gif" alt="Reply With Quote" border="0"></a>
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 1002293 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1002293_menu" style="display:none">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">pointer</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://www.actionscript.org/forums/member.php3?u=8989">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.actionscript.org/forums/search.php3?do=finduser&amp;u=8989" rel="nofollow">Find More Posts by pointer</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1002293 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1002293 --><!-- post #1002352 -->
+
+	<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:100%; text-align:left">
+			<div style="padding:0px 0px 0px 0px">
+
+	<div id="edit1002352" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table id="post1002352" class="tborder" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+<tbody><tr>
+	
+		<td class="thead" style="font-weight: normal; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(255, 255, 255) -moz-use-text-color rgb(255, 255, 255) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;">
+			<!-- status icon and date -->
+			<a name="post1002352"><img title="Old" class="inlineimg" src="as2-cdata_files/post_old.gif" alt="Old" border="0"></a>
+			05-26-2010, 03:52 PM
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight: normal; border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;" align="right">
+			&nbsp;
+			#<a href="http://www.actionscript.org/forums/showpost.php3?p=1002352&amp;postcount=2" target="new" rel="nofollow" id="postcount1002352" name="2"><strong>2</strong></a>
+			
+		</td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2" style="border-right: 1px solid rgb(255, 255, 255); border-left: 1px solid rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 0px 1px; border-style: none solid; border-color: -moz-use-text-color rgb(255, 255, 255);" width="175">
+
+			<div id="postmenu_1002352">
+				
+				<a class="bigusername" href="http://www.actionscript.org/forums/member.php3?u=4278">CyanBlue</a>
+				<script type="text/javascript"> vbmenu_register("postmenu_1002352", true); </script>
+				
+			</div>
+
+			<div class="smallfont">Super Moderator</div>
+			
+			
+
+			
+				<div class="smallfont">
+					&nbsp;<br><a href="http://www.actionscript.org/forums/member.php3?u=4278"><img title="CyanBlue's Avatar" src="as2-cdata_files/avatar4278_2.gif" alt="CyanBlue's Avatar" border="0"></a>
+				</div>
+			
+
+			<div class="smallfont">
+				&nbsp;<br>
+				<div>Join Date: Jan 2002</div>
+				<div>Location: Centreville, VA</div>
+				
+				<div>
+					Posts: 26,476
+				</div>
+				
+				
+				
+				
+				<div>    </div>
+			</div>
+
+	</td>
+	
+	<td class="alt1" id="td_post_1002352" style="border-right: 1px solid rgb(255, 255, 255);">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="as2-cdata_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color:#FFFFFF; background-color:#FFFFFF" size="1">
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_1002352">
+			
+			It's not the CDATA that's causing problem...  AS2 does not support inline XML like AS3...  You can't even do this with AS2...<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">ActionScript Code:</div>
+	<pre class="alt2" style="margin:0px; padding:6px; border:1px inset; width:500px; height:52px; overflow:auto"><div dir="ltr" style="text-align:left;"><div class="actionscript"><span style="color: #993300;">var</span> <span style="color: #993300;">xml</span>:XML = &lt;hello&gt;world&lt;/hello&gt;;</div></div></pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br>
+				CyanBlue / Jason Je / Macromedia Certified Flash Developer &amp; Designer<br>
+<a href="http://cyanblue.flashvacuum.com/" target="_blank">http://CyanBlue.FlashVacuum.com</a><br>
+<a href="http://www.flashvacuum.com/" target="_blank">http://www.FlashVacuum.com</a><br>
+<a href="http://tutorials.flashvacuum.com/" target="_blank">http://tutorials.FlashVacuum.com</a><br>
+<br>
+<b><font color="DarkGreen">Do</font> <font color="Red">NOT</font> <font color="Blue">PM</font>, <font color="YellowGreen">Email</font> or <font color="Purple">Call</font> me...  Your question belongs right in this forum...</b>  <img src="as2-cdata_files/frown.gif" alt="" title="frown" class="inlineimg" border="0">
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="border-right: 1px solid rgb(255, 255, 255); border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(255, 255, 255) rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;">
+		<img title="CyanBlue is offline" class="inlineimg" src="as2-cdata_files/user_offline.gif" alt="CyanBlue is offline" border="0">
+
+
+		
+		
+		
+		
+		&nbsp;
+	</td>
+	
+	<td class="alt1" style="border-right: 1px solid rgb(255, 255, 255); border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: -moz-use-text-color rgb(255, 255, 255) rgb(255, 255, 255) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none;" align="right">
+	
+		<!-- controls -->
+		
+		
+		
+			<a href="http://www.actionscript.org/forums/newreply.php3?do=newreply&amp;p=1002352" rel="nofollow"><img title="Reply With Quote" src="as2-cdata_files/quote.gif" alt="Reply With Quote" border="0"></a>
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		<!-- / controls -->
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 1002352 popup menu -->
+<div class="vbmenu_popup" id="postmenu_1002352_menu" style="display:none">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">CyanBlue</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://www.actionscript.org/forums/member.php3?u=4278">View Public Profile</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.flashvacuum.com/">Visit CyanBlue's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.actionscript.org/forums/search.php3?do=finduser&amp;u=4278" rel="nofollow">Find More Posts by CyanBlue</a></td></tr>
+	
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 1002352 popup menu -->
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #1002352 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+	<div align="center">
+		<div class="page" style="width:100%; text-align:left">
+			<div style="padding:0px 0px 0px 0px">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="top">
+	
+		<td class="smallfont"><a href="http://www.actionscript.org/forums/newreply.php3?do=newreply&amp;noquote=1&amp;p=1002352" rel="nofollow"><img title="Reply" src="as2-cdata_files/reply.gif" alt="Reply" border="0"></a></td>
+		
+	
+</tr>
+</tbody></table>
+<!-- / controls below postbits -->
+
+
+
+
+<br>
+
+<div style="width:300;" align="center">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a href="#" title="Send to Facebook_like" class="addthis_button_facebook_like at300b" fb:like:layout="button_count"><fb:like class=" fb_edge_widget_with_comment fb_iframe_widget" ref=".TrkCWzzcNFo.like" layout="button_count" show_faces="false" action="like" width="90" font="arial" href="http://www.actionscript.org/forums/showthread.php3?t=239834"><span><iframe src="as2-cdata_files/like.htm" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 90px;" name="f1052a28c25e302" id="f4b7e6b627b824" scrolling="no"></iframe></span></fb:like></a>
+<a href="#" title="Tweet" class="addthis_button_tweet at300b"><iframe title="Twitter For Websites: Tweet Button" style="width: 110px; height: 20px;" class="twitter-share-button twitter-count-horizontal" src="as2-cdata_files/tweet_button.htm" allowtransparency="true" frameborder="0" scrolling="no"></iframe></a>
+<a style="display: block;" class="addthis_counter addthis_pill_style"><a class="atc_s addthis_button_compact"><span></span></a><a href="#" title="View more services" class="addthis_button_expanded"></a></a>
+<div class="atclear"></div></div>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="as2-cdata_files/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+</div>
+
+
+<div class="smallfont" align="center">
+	<strong>«</strong>
+		<a href="http://www.actionscript.org/forums/showthread.php3?t=239834&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+		|
+		<a href="http://www.actionscript.org/forums/showthread.php3?t=239834&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>»</strong>
+</div>
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+<!-- currently active users -->
+
+<!-- end currently active users -->
+
+
+<!-- popup menu contents -->
+<br>
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php3?t=239834&amp;pollid=" method="post" name="threadadminform">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img title="Show Printable Version" class="inlineimg" src="as2-cdata_files/printer.gif" alt="Show Printable Version"> <a href="http://www.actionscript.org/forums/printthread.php3?t=239834" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img title="Email this Page" class="inlineimg" src="as2-cdata_files/sendtofriend.gif" alt="Email this Page"> <a href="http://www.actionscript.org/forums/sendmessage.php3?do=sendtofriend&amp;t=239834" rel="nofollow">Email this Page</a></td>
+	</tr>
+	
+	
+	
+	</tbody></table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img title="Linear Mode" class="inlineimg" src="as2-cdata_files/mode_linear.gif" alt="Linear Mode"> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img title="Hybrid Mode" class="inlineimg" src="as2-cdata_files/mode_hybrid.gif" alt="Hybrid Mode"> <a href="http://www.actionscript.org/forums/showthread.php3?mode=hybrid&amp;t=239834">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img title="Threaded Mode" class="inlineimg" src="as2-cdata_files/mode_threaded.gif" alt="Threaded Mode"> <a href="http://www.actionscript.org/forums/showthread.php3?p=1002293&amp;mode=threaded#post1002293">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</tbody></table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+	<!-- thread rating menu -->
+	<div class="vbmenu_popup" id="threadrating_menu" style="display:none">
+	<form action="threadrate.php3?t=239834" method="post" id="showthread_threadrate_form">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead">Rate This Thread<a name="goto_threadrating"></a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option" title="nohilite" id="threadrating_options">
+			<div><img title="Excellent" class="inlineimg" src="as2-cdata_files/rating_5.gif" alt="Excellent"><label for="vote5"><input name="vote" id="vote5" value="5" type="radio">Excellent</label></div>
+			<div><img title="Good" class="inlineimg" src="as2-cdata_files/rating_4.gif" alt="Good"><label for="vote4"><input name="vote" id="vote4" value="4" type="radio">Good</label></div>
+			<div><img title="Average" class="inlineimg" src="as2-cdata_files/rating_3.gif" alt="Average"><label for="vote3"><input name="vote" id="vote3" value="3" type="radio">Average</label></div>
+			<div><img title="Bad" class="inlineimg" src="as2-cdata_files/rating_2.gif" alt="Bad"><label for="vote2"><input name="vote" id="vote2" value="2" type="radio">Bad</label></div>
+			<div><img title="Terrible" class="inlineimg" src="as2-cdata_files/rating_1.gif" alt="Terrible"><label for="vote1"><input name="vote" id="vote1" value="1" type="radio">Terrible</label></div>
+			</td>
+		</tr>
+		<tr id="threadrating_submit">
+			<td class="vbmenu_option" title="nohilite" align="center">
+				<input name="s" value="616ea50e8f6f2eb1226eb0f88ed8bd70" type="hidden">
+	<input name="securitytoken" value="guest" type="hidden">
+				<input name="t" value="239834" type="hidden">
+				<input name="pp" value="10" type="hidden">
+				<input name="page" value="1" type="hidden">
+				<input value="Vote Now" class="button" type="button">
+			</td>
+		</tr>
+		
+		</tbody></table>
+	</form>
+	</div>
+	<!-- / thread rating menu -->
+
+	<script type="text/javascript" src="as2-cdata_files/vbulletin_ajax_threadrate.js"></script>
+	<script type="text/javascript">
+	<!--
+	vB_AJAX_ThreadRate_Init('showthread_threadrate_form');
+	var threadid = 239834;
+	//-->
+	</script>
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="bottom">
+	<td class="smallfont" align="left">
+		<table class="tborder" border="0" cellpadding="6" cellspacing="1" width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float: right;" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="as2-cdata_files/collapse_thead.gif" alt="" border="0"></a>
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr>
+		
+		<div><a href="http://www.actionscript.org/forums/misc.php3?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a href="http://www.actionscript.org/forums/misc.php3?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a href="http://www.actionscript.org/forums/misc.php3?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>Off</strong></div>
+		<div>HTML code is <strong>Off</strong></div>
+		<hr>
+		<div><a href="http://www.actionscript.org/forums/misc.php3?do=showrules" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table border="0" cellpadding="0" cellspacing="0">
+		
+		<tbody><tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="forumdisplay.php3" method="get">
+	<input name="s" value="" type="hidden">
+	<input name="daysprune" value="" type="hidden">
+	<strong>Forum Jump</strong><br>
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp">User Control Panel</option>
+			<option value="pm">Private Messages</option>
+			<option value="subs">Subscriptions</option>
+			<option value="wol">Who's Online</option>
+			<option value="search">Search Forums</option>
+			<option value="home">Forums Home</option>
+		</optgroup>
+		
+		<optgroup label="Forums">
+		<option value="84" class="fjdpth0"> ActionScript Forums Group</option>
+<option value="75" class="fjdpth1">&nbsp; &nbsp;  ActionScript 3.0</option>
+<option value="35" class="fjsel" selected="selected">&nbsp; &nbsp;  ActionScript 2.0</option>
+<option value="59" class="fjdpth1">&nbsp; &nbsp;  ActionScript 1.0 (and below)</option>
+<option value="53" class="fjdpth1">&nbsp; &nbsp;  Simple Stuff (Newbies)</option>
+<option value="85" class="fjdpth0"> Flash General Questions</option>
+<option value="95" class="fjdpth1">&nbsp; &nbsp;  Flash 10 General Questions</option>
+<option value="86" class="fjdpth1">&nbsp; &nbsp;  Flash 9 General Questions</option>
+<option value="72" class="fjdpth1">&nbsp; &nbsp;  Flash 8 General Questions</option>
+<option value="62" class="fjdpth1">&nbsp; &nbsp;  Other Flash General Questions</option>
+<option value="73" class="fjdpth0"> Flex</option>
+<option value="74" class="fjdpth1">&nbsp; &nbsp;  Flex 2, 3 &amp; 4</option>
+<option value="76" class="fjdpth1">&nbsp; &nbsp;  Flex 1</option>
+<option value="34" class="fjdpth0"> Extensions and Plugins</option>
+<option value="36" class="fjdpth1">&nbsp; &nbsp;  Components</option>
+<option value="37" class="fjdpth1">&nbsp; &nbsp;  JSFL - Extending Flash</option>
+<option value="89" class="fjdpth0"> Desktop, Mobile and non-browser Environments</option>
+<option value="88" class="fjdpth1">&nbsp; &nbsp;  AIR (Apollo)</option>
+<option value="90" class="fjdpth1">&nbsp; &nbsp;  FlashLite / Portable Devices Development</option>
+<option value="69" class="fjdpth1">&nbsp; &nbsp;  Projectors and CDs</option>
+<option value="44" class="fjdpth0"> Supporting Technologies</option>
+<option value="68" class="fjdpth1">&nbsp; &nbsp;  HTML and JavaScript</option>
+<option value="94" class="fjdpth1">&nbsp; &nbsp;  haXe</option>
+<option value="45" class="fjdpth1">&nbsp; &nbsp;  Server-Side Scripting</option>
+<option value="46" class="fjdpth1">&nbsp; &nbsp;  Flash Remoting</option>
+<option value="47" class="fjdpth1">&nbsp; &nbsp;  Flash Media Server</option>
+<option value="51" class="fjdpth0"> General</option>
+<option value="92" class="fjdpth1">&nbsp; &nbsp;  Best Practices</option>
+<option value="91" class="fjdpth1">&nbsp; &nbsp;  Gaming and Game Development</option>
+<option value="54" class="fjdpth1">&nbsp; &nbsp;  Animation and Effects</option>
+<option value="61" class="fjdpth1">&nbsp; &nbsp;  Flashants Support Forum</option>
+<option value="48" class="fjdpth0"> Community Boards</option>
+<option value="49" class="fjdpth1">&nbsp; &nbsp;  General Chat</option>
+<option value="50" class="fjdpth1">&nbsp; &nbsp;  Just for Kicks Challenges</option>
+<option value="70" class="fjdpth1">&nbsp; &nbsp;  Detention</option>
+<option value="41" class="fjdpth0"> Flash In Action</option>
+<option value="42" class="fjdpth1">&nbsp; &nbsp;  Site Check</option>
+<option value="43" class="fjdpth1">&nbsp; &nbsp;  Cool Sites</option>
+<option value="71" class="fjdpth1">&nbsp; &nbsp;  Widgets</option>
+<option value="55" class="fjdpth0"> Decommissioned</option>
+<option value="57" class="fjdpth1">&nbsp; &nbsp;  Projects and Positions</option>
+<option value="77" class="fjdpth0"> CMS Forums</option>
+<option value="82" class="fjdpth1">&nbsp; &nbsp;  Announcements Board</option>
+<option value="78" class="fjdpth1">&nbsp; &nbsp;  Content Postings / Updates</option>
+<option value="83" class="fjdpth1">&nbsp; &nbsp;  Product Review Requests</option>
+<option value="79" class="fjdpth1">&nbsp; &nbsp;  CMS Technical Questions</option>
+<option value="80" class="fjdpth1">&nbsp; &nbsp;  Process Questions</option>
+<option value="81" class="fjdpth1">&nbsp; &nbsp;  Collaboration &amp; Suggested Articles</option>
+
+		</optgroup>
+		
+	</select><input class="button" value="Go" type="submit">
+	</form>
+</div>
+			</td>
+		</tr>		
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+
+
+<br>
+<div class="smallfont" align="center">All times are GMT. The time now is <span class="time">10:15 AM</span>.</div>
+<br>
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+<!-- Start right table -->
+	</td>
+
+	<td class="page" style="padding: 6px;" valign="top" width="150">
+<!-- include right side bar content -->
+
+
+
+<div class="ForumSideBar">
+<div class="block">
+ <h2><strong>Categories</strong></h2>
+ <ul>
+	<li><strong><a href="http://www.actionscript.org/resources/categories/Tutorials/"><strong>Tutorials</strong></a></strong></li><strong>
+	<li style="margin-left: 20px;"><strong><a href="http://www.actionscript.org/resources/categories/Tutorials/Flash/">Flash</a></strong></li>
+	<li style="margin-left: 20px;"><strong><a href="http://www.actionscript.org/resources/categories/Tutorials/Flex/">Flex</a></strong></li>
+	</strong><li><strong><a href="http://www.actionscript.org/resources/categories/Articles/">Articles</a></strong></li>
+	<li style="margin-left: 20px;"><strong><a href="http://www.actionscript.org/resources/categories/Articles/Best-Practices/">Best Practices</a></strong></li>
+	<li style="margin-left: 20px;"><strong><a href="http://www.actionscript.org/resources/categories/Articles/Product-Reviews/">Product Reviews</a></strong></li>
+	<li style="margin-left: 20px;"><strong><a href="http://www.actionscript.org/resources/categories/Articles/Third-Party/">Third Party</a></strong></li>
+	<li><strong><a href="http://www.actionscript.org/resources/categories/Press-Releases/">Press Releases</a></strong></li>
+	<li><strong><a href="http://www.actionscript.org/resources/categories/The-Community/">The Community</a></strong></li>
+ </ul>
+ 
+</div>
+</div>
+
+
+<div class="facebook_wrap_thin">	
+<script src="as2-cdata_files/all.js"></script><fb:like class=" fb_edge_widget_with_comment fb_iframe_widget" href="http://www.facebook.com/pages/actionscript/139007319447306" layout="button_count" style="margin:5px 0px 0px 5px;" width="160"><span><iframe src="as2-cdata_files/like_002.htm" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 160px;" name="f2043979bc4cb3c" id="f11c1a5a8defdc6" scrolling="no"></iframe></span></fb:like>
+</div>
+<center><a href="http://www.twitter.com/actionscriptorg"><img title="Follow actionscriptorg on Twitter" src="as2-cdata_files/follow_us-c.png" alt="Follow actionscriptorg on Twitter"></a></center>
+
+
+
+<p>&nbsp;</p>
+
+<!-- ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper -->
+<script type="text/javascript">
+GA_googleFillSlot("ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper");
+</script><script src="as2-cdata_files/ads"></script><div id="google_ads_div_ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper_ad_container">
+<ins style="width: 160px; height: 600px; display: inline-table; position: relative; border: 0pt none;"><ins style="width: 160px; height: 600px; display: block; position: relative; border: 0pt none;"><iframe style="border: 0pt none; position: absolute; top: 0pt; left: 0pt;" marginheight="0" marginwidth="0" name="google_ads_iframe_ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper" id="google_ads_iframe_ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper" frameborder="0" height="600" scrolling="no" width="160"></iframe></ins></ins></div>
+<script>GA_googleCreateDomIframe("google_ads_div_ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper_ad_container" ,"ActionScriptORG_Forums_ATF_Right_160x600_Skyscraper");</script>
+
+
+<div class="ForumSideBar"><div class="block">
+<div class="FeaturedJobs">
+<h2>Featured Jobs</h2>
+<ul>
+	<li><strong><a href="http://www.actionscript.org/employment/view_position.php?source=f&amp;id=5592">
+        Technical Flash Artist	              </a></strong>
+	            <br>
+            	    MADISON, USA<img src="as2-cdata_files/600a-line.gif" height="5" width="100%"><br>
+                    </li>
+	<li><strong><a href="http://www.actionscript.org/employment/view_position.php?source=f&amp;id=5585">
+        iPhone/iPad Developer - CREATIVE CIRCLE	              </a></strong>
+	            <br>
+            	    Philadelphia, USA<img src="as2-cdata_files/600a-line.gif" height="5" width="100%"><br>
+                    </li>
+	<li><strong><a href="http://www.actionscript.org/employment/view_position.php?source=f&amp;id=5584">
+        UX DESIGNER - CREATIVE CIRCLE	              </a></strong>
+	            <br>
+            	    Philadelphia, USA<img src="as2-cdata_files/600a-line.gif" height="5" width="100%"><br>
+                    </li>
+	<li><a href="http://www.actionscript.org/employment/search_positions.php">- More ActionScript, Flash and Flex jobs in the Employment Section.</a></li>
+<li><a href="http://www.actionscript.org/employment/">- Advertise a job for free</a></li>
+</ul>
+</div>
+</div></div>
+<!-- /include right side bar content -->
+	</td>
+
+	</tr>
+</tbody></table>
+
+<!-- Stop right table -->
+<form action="index.php3" method="get">
+	
+<table class="page" style="margin-bottom: 10px;" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+<tbody><tr>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="http://www.actionscript.org/resources/pages/Contact-Us" rel="nofollow">Contact Us</a> -
+				<a href="http://www.actionscript.org/">Home Page</a> -
+				
+				
+				<a href="http://www.actionscript.org/forums/archive/index.php3">Archive</a> -
+				<a href="http://www.actionscript.org/resources/pages/Privacy-Statement">Privacy Statement</a> -
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</tbody></table>
+
+
+
+<br>
+<!-- $ includebannerabovecopyright -->
+
+
+<div align="center">
+	<div class="smallfont" align="center">
+	<!-- Do not remove this copyright notice -->
+	Powered by vBulletin® Version 3.8.5<br>Copyright ©2000 - 2011, Jelsoft Enterprises Ltd.
+	<!-- Do not remove this copyright notice -->
+	</div>
+	
+	<div class="smallfont" align="center">
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	Ad Management plugin by <a href="http://redtyger.co.uk/" target="_blank">RedTyger</a>
+	</div>
+</div>
+
+</form>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+
+<!-- custom AS.org template begins -->
+<!---------------------- page end STARTS ------------------------------>
+<!-- Start PageFooter -->
+
+<img src="as2-cdata_files/940.gif" height="30" width="938"><a href="http://www.webscorpion.com/" target="_blank"><img src="as2-cdata_files/ws-bottom.gif" align="left" border="0" height="55" width="334"></a>
+<div style="padding: 20px 0px 0px 20px;">Copyright 2000-2010 ActionScript.org. All Rights Reserved. <br>
+Your use of this site is subject to our <a href="http://www.actionscript.org/resources/pages/Privacy-Statement">Privacy Policy and Terms of Use</a>.</div>
+</div>
+<!-- Analytics -->
+<script src="as2-cdata_files/urchin.js" type="text/javascript"> 
+</script> 
+<script type="text/javascript"> 
+_uacct = "UA-650696-1"; 
+urchinTracker(); 
+</script>
+<!-- / END Analytics -->
+
+<!-- VigLink -->
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: '7acd994d372141d1770978b4d84c4761' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+<!-- / END VigLink -->
+
+
+</div>
+
+<!---------------------- page end ENDs ------------------------------>
+<!-- custom AS.org template ends -->
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		<!-- thread ratings form here -->
+	
+	<!-- / thread rate -->
+</div>
+
+
+</body></html>

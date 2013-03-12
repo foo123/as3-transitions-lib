@@ -1,0 +1,48 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial;
+	color: black;
+	font-weight: bold;	
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+}
+h1 {
+	font-size: 45px;
+	padding-top: 0px;
+} 
+h2, h3, h4 {
+	font-size: 30px;
+}
+h5, h6 {
+	font-size: 20px;
+}
+a {
+	text-decoration: none;
+}
+a, img, a img {
+	border: 0;
+	outline: none;
+}
+.webroundup li {
+	float: left;
+}
+.webroundup div {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+#header,
+.post_taxonomy,
+.freebie_download,
+.download_wrap,
+.article_social_media,
+.plus_membership,
+.extra_posts,
+.the_author .avatar,
+.the_author_p,
+.comments,
+.enjoyed_post,
+.wp-pagenavi,
+#sidebar,
+#footer {
+	display: none;
+}

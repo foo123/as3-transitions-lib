@@ -1,0 +1,39 @@
+/*Contactform III default styling*/
+#contactform {
+	padding:2px;
+	margin:5px 0px;
+	overflow: hidden;
+	line-height:1em;
+	text-align: left;
+}
+#contactform fieldset {
+	border:none;
+}
+
+#contactform input, #contactform textarea {
+	display:block;
+	margin:2px 0px 5px;
+	padding:2px;
+}
+#contactform input {
+	width:60%;
+}
+#contactform textarea {
+	width:90%;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+input#contactsubmit {
+	width:25%;
+	margin-top:3px;
+	padding:2px;
+	display:block;
+}
+input.hiddenfield {
+	background:transparent;
+	border:none;
+	padding:0px;
+	margin:0px;
+}

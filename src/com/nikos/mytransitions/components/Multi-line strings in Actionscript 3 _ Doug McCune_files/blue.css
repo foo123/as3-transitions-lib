@@ -1,0 +1,10 @@
+#header { background: #44484F url('images/mccune_header.jpg') bottom center no-repeat; }
+a, h2 a:hover, h3 a:hover, .entry p a:visited { color: #2E8FC6; }
+a:hover { color: #0F3461; }
+#sidebar li { list-style-image: url(images/blue/star.gif); }
+.cal { background: #1C5B9E url(images/blue/cal_bg.jpg) repeat-x; }
+
+.calborder { 
+  background: #A3CFEC;
+  border: 1px solid #0F3461;
+}

@@ -1,0 +1,23 @@
+<languageVersion : 1.0;>
+
+kernel Crossfade
+<   namespace : "Mixing Images";
+    vendor : "lively3d";
+    version : 1;
+    description : "Mixing"; >
+{
+   parameter float intensity;
+
+   input image4 topImage;
+   input image4 bottomImage;
+   output pixel4 dst;
+   
+   void evaluatePixel()
+   {
+        // Acquire the pixel values from both images at the current location
+        pixel4 topPixel = sampleNearest(topImage, outCoord());
+        pixel4 bottomPixel = sampleNearest(bottomImage, outCoord());
+        
+        dst = (1.0-intensity)*topPixel+ bottomPixel*intensity;
+   }
+}

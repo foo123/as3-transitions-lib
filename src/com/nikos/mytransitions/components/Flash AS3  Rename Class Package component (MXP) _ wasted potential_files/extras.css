@@ -1,0 +1,14 @@
+.hidden {
+	display: none;
+}
+
+/* Resolves a css conflict causing the Shadowbox to display right aligned */
+#sb-container {
+	text-align:left;
+}
+
+/* Resolves a problem where cancel link shows up in default blue */
+#sb-loading a {
+	color: #fff;
+	text-decoration: none;
+}

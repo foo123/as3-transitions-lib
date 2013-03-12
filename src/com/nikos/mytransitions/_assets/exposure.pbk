@@ -1,0 +1,31 @@
+<languageVersion : 1.0;>
+
+kernel NewFilter
+<   namespace : "Your Namespace";
+    vendor : "Your Vendor";
+    version : 1;
+    description : "your description";
+>
+{
+    input image4 src;
+    output pixel4 dst;
+    
+    parameter float exposureParam
+    <
+    minValue:-1.0;
+    maxValue:1.0;
+    defaultValue:0.0;
+    >;
+
+
+    void
+    evaluatePixel()
+    {
+     pixel4 colorChannel = sampleNearest(src,outCoord());
+          
+     dst.rgb = pow( colorChannel.rgb, float3(1.0 - exposureParam)); 
+     dst.a = colorChannel.a; 
+     
+
+    }
+}

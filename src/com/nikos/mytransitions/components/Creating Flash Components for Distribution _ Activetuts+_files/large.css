@@ -1,0 +1,85 @@
+/* Wraps */
+#header_wrap,
+#content_wrap,
+#footer_wrap {
+  min-width: 1190px;
+}
+/* Content Widths */ 
+#header,
+#sub_header,
+#content,
+#footer {
+  width: 1190px;
+}
+/* Plus Logo */
+.small_plus {
+  right: -73px;
+  top: -24px;
+}
+/* Sidebar */
+#sidebar {
+  width: 420px;
+  overflow: visible;
+}
+#sidebar .plus_member .plus_icon,
+#sidebar .rockable_book .rockable_book_icon,
+#sidebar .session_side .session_side_icon,
+#sidebar .snipplr .snipplr_icon {
+  margin: 0px 20px 0 10px;
+}
+#sidebar .mail_chimp .mail_chimp_icon {
+  margin: 30px 0px 0 30px;
+}
+#sidebar .plus_member .plus_text,
+#sidebar .rockable_book .rockable_book_text,
+#sidebar .session_side .session_side_text,
+#sidebar .snipplr .snipplr_text,
+#sidebar .mail_chimp .mail_chimp_text {
+  width: 240px;
+}
+#sidebar .snipplr .snipplr_icon {
+  background: url(../images/global/snipplr-large.png) no-repeat 30px top;
+}
+.tab_div h3 {
+  text-align: center;
+}
+.creattica {
+  padding: 44px 44px 26px 43px;
+  margin-bottom: 20px;
+}
+.creattica p {
+  float: left;
+}
+.creattica img.creattica_item {
+  width: 320px;
+  height: 260px;
+  margin-bottom: 22px;
+}
+#social_networking {
+  width: 410px;
+}
+#facebook_tab h3 {
+  /* display: none; */
+}
+#flickr_tab h3 {
+  padding: 30px 20px 5px 20px;
+}
+#flickr_tab ul {
+  padding: 15px 0 45px 45px;
+}
+.sidebar_subscribe .get_updates {
+  width: 58px;
+}
+.sidebar_subscribe .s_count {
+  padding-bottom: 0px;
+}
+.sidebar_subscribe .s_count em {
+  line-height: 22px;
+  padding-bottom: 1px;
+}
+.side_basix .basix_logo {
+  margin: 20px 33px 0 15px;
+}
+.side_basix .basix_text {
+  width: 240px;
+}

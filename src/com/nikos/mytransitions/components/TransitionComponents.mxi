@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macromedia-extension
+name="TransitionComponents"
+version="0.1"
+type="component"
+requires-restart="true">
+<author name="Nikos M." />
+<products>
+<product name="Flash" version="9" primary="true" />
+</products>
+<!-- Describe where the extension shows in the UI of the product -->
+<description>
+<![CDATA[
+All Transition Effect Components (based on AS3 Transition Library v. 2.4.0). 
+Author Nikos M. web http://nikos-web-development.netai.net
+]]>
+</description>
+<ui-access>
+<![CDATA[
+Access the components via Flash > Components > nikos-components
+Component Parameters are available via Components Inspector 
+]]>
+</ui-access>
+<!-- Describe the files that comprise the extension -->
+<files>
+<file name="commands.jsfl" destination="$flash/Components/nikos-components" />
+<file name="BlindsComponent.swc" destination="$flash/Components/nikos-components" />
+<file name="FadeTilesComponent.swc" destination="$flash/Components/nikos-components" />
+<file name="FlipTilesComponent.swc" destination="$flash/Components/nikos-components" />
+<file name="ScaleTilesComponent.swc" destination="$flash/Components/nikos-components" />
+</files>
+</macromedia-extension>
