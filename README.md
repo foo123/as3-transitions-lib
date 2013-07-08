@@ -7,7 +7,7 @@ __Image Transitions Library for Actionscript 3__
 * http://foo123.github.com/examples/as3-transitions-lib/
 
 ###TODO
-* Transform the libray into Flash IDE components ( _in progress_ )
+* Transform the library into Flash IDE components ( _in progress_ )
 
 *Contributor* Nikos M.  
 *URL* [Nikos Web Development](http://nikos-web-development.netai.net/ "Nikos Web Development")  
