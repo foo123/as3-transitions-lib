@@ -1,14 +1,13 @@
 as3-transitions-lib
 ===================
 
-Image Transitions Library for Actionscript 3 (incomplete)
+__Image Transitions Library for Actionscript 3__ 
 
-NOTE: The library classes are more or less complete, the functionality to be transformed into Components
-to be used from inside Flash IDE is still in progress :(
+###Live Example
+* http://foo123.github.com/examples/as3-transitions-lib/
 
-##Live Example
-http://foo123.github.com/examples/as3-transitions-lib/
-
+###TODO
+* Transform the libray into Flash IDE components ( _in progress_ )
 
 *Contributor* Nikos M.  
 *URL* [Nikos Web Development](http://nikos-web-development.netai.net/ "Nikos Web Development")  
