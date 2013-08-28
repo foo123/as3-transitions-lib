@@ -9,6 +9,5 @@ __Image Transitions Library for Actionscript 3__
 ###TODO
 * Transform the library into Flash IDE components ( _in progress_ )
 
-*Contributor* Nikos M.  
 *URL* [Nikos Web Development](http://nikos-web-development.netai.net/ "Nikos Web Development")  
 *URL* [WorkingClassCode](http://workingclasscode.uphero.com/ "Working Class Code")  
