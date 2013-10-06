@@ -1,6 +1,9 @@
 as3-transitions-lib
 ===================
 
+## Further development on this project has stopped!!
+
+
 __Image Transitions Library for Actionscript 3__ 
 
 ###Live Example
