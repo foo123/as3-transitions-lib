@@ -8,6 +8,8 @@ __Image Transitions Library for Actionscript 3__
 
 ###Live Example
 * http://foo123.github.com/examples/as3-transitions-lib/
+###Manual
+* http://foo123.github.com/examples/as3-transitions-lib/manual.pdf
 
 ###TODO
 * Transform the library into Flash IDE components ( _in progress_ )
